@@ -1,19 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: grithika-app
+
 spec:
   replicas: 2
+
   selector:
     matchLabels:
       app: grithika-app
+
   template:
     metadata:
       labels:
         app: grithika-app
+
     spec:
       containers:
-      - name: grithika-app
-        image: grithika-app:v1
-        ports:
-        - containerPort: 8080
+        - name: grithika-app
+          image: umamahesh571/grithika-labs-app
+          ports:
+            - containerPort: 8080
